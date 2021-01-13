@@ -7,7 +7,6 @@ export default class Login extends React.Component {
 
         this.state = {
             username: "",
-            email: "",
             password: ""
         };
 
@@ -17,7 +16,6 @@ export default class Login extends React.Component {
     handleSubmit(e){
         this.props.login({
             username: this.state.username,
-            email: this.state.email,
             password: this.state.password
         }).then(() => {
             this.props.history.push("/chirps")
